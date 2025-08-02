@@ -93,10 +93,10 @@ async function playRaceFight(character1, character2) {
       );
     }
     if (fight === "AURA") {
-      totalTestSkill1 = diceResult1 + character1.HAKI;
-      totalTestSkill2 = diceResult2 + character2.HAKI;
+      let auraResult1 = diceResult1 + character1.HAKI;
+      let auraResult2 = diceResult2 + character2.HAKI;
 
-      console.log(`${character1.NOME} confrontou com ${character2.NOME}!🥊`)
+      console.log(`${character1.NOME} confrontou com ${character2.NOME}!🥊`);
 
       await LogRollResult(
         character1.NOME,
@@ -110,15 +110,28 @@ async function playRaceFight(character1, character2) {
         diceResult2,
         character2.HAKI
       );
+
+      character2.PONTOS -=
+        auraResult1 > auraResult2 && character2.PONTOS > 0 ? 1 : 0;
+
+      character1.PONTOS -=
+        auraResult2 > auraResult1 && character1.PONTOS > 0 ? 1 : 0;
+
+      console.log(
+        auraResult2 === auraResult1
+          ? "confronto empatado! nenhum ponto foi perdido!"
+          : ""
+      );
     }
-    if(totalTestSkill1> totalTestSkill2){
-      console.log(`${character1.NOME} marcou 1 ponto`)
+
+    if (totalTestSkill1 > totalTestSkill2) {
+      console.log(`${character1.NOME} marcou um ponto`);
       character1.PONTOS++;
-    }else if(totalTestSkill2>totalTestSkill1 ){
-      console.log(`${character2.NOME} marcou 1 ponto`)
+    } else if (totalTestSkill2 > totalTestSkill1) {
+      console.log(`${character2.NOME} marcou um ponto`);
       character2.PONTOS++;
     }
-    console.log("_____________________________________")
+    console.log("_____________________________________");
   }
 }
 
