@@ -111,19 +111,16 @@
 ## Como Executar o Projeto
 
 1. Clone o repositório:
-
    ```bash
-   git clone https://github.com/fabiocasadossites/desafio-nodejs-mariokart-dio.git
+   git clone https://github.com/LuanBmenez/one-piece-battle-simulator.git
    ```
 
 2. Navegue até o diretório do projeto:
-
    ```bash
-   cd nome-do-repositorio
+   cd one-piece-battle-simulator
    ```
 
-3. Em seu terminal e na pasta do projeto
-
+3. Execute o projeto:
    ```bash
-   node src/index.js
+   npm start
    ```

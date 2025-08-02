@@ -70,5 +70,5 @@ if(fight === "AURA"){
 
 (async function main() {
   console.log(`🥊🚨Luta entre ${player1.NOME} e ${player2.NOME} começando ...\n`);
-  await playRaceEngine(player1, player2)
+  await playRaceFight(player1, player2);
 })();
