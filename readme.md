@@ -1,16 +1,15 @@
 # Entrega de projeto - Simulador de Lutas One Piece com Node.js
 
-  <li> <label for="pistas-1-item">Os personagens irão lutar em uma batalha de 5 rodadas</label></li>
-  <li> <label for="pistas-2-item">A cada rodada, será sorteado um tipo de confronto que pode ser Corrida, Luta ou Aura</label></li>esenvolvida uma Luta que considera as habilidades dos personagens piratas e as variáveis das pistas. O desenvolvimento foi realizado utilizando NodeJS.
+Neste projeto, foi desenvolvida uma batalha que considera as habilidades dos personagens piratas. O desenvolvimento foi realizado utilizando NodeJS.
 
 <table>
         <tr>
             <td>
-                <img src="./docs/header.gif" alt="One Piece Race" width="200">
+                <img src="./docs/header.gif" alt="One Piece Battle" width="200">
             </td>
             <td>
                 <b>Objetivo:</b>
-                <p>One Piece é uma série de mangá e anime criada por Eiichiro Oda. Nosso desafio será criar uma lógica de um jogo de vídeo game para simular Lutas entre piratas do universo One Piece, levando em consideração as regras e mecânicas abaixo.</p>
+                <p>One Piece é uma série de mangá e anime criada por Eiichiro Oda. Nosso desafio será criar uma lógica de um jogo para simular Lutas entre piratas do universo One Piece, levando em consideração as regras e mecânicas abaixo.</p>
             </td>
         </tr>
     </table>
@@ -83,17 +82,17 @@
 
 <b>Jogadores:</b>
 
-<label for="jogadores-item">O Computador deve receber dois personagens para disputar a Luta em um objeto cada</label>
+<label for="jogadores-item">O usuário pode escolher dois personagens dentre 6 disponíveis para disputar a Luta</label>
 
 <b>Batalhas:</b>
 
 <ul>
-  <li> <label for="pistas-1-item">Os personagens irão correr em uma pista aleatória de 5 rodadas</label></li>
-  <li> <label for="pistas-2-item">A cada rodada, será sorteado um bloco da pista que pode ser uma reta, curva ou confronto</label>
+  <li> <label for="pistas-1-item">Os personagens irão lutar em uma batalha de 5 rodadas</label></li>
+  <li> <label for="pistas-2-item">A cada rodada, será sorteado um tipo de confronto que pode ser **DESVIA**, **LUTA** ou **AURA**</label></li>
     <ul>
-      <li><label for="pistas-2-1-item">Caso seja um confronto de **Corrida**, o jogador deve jogar um dado de 6 lados e somar o atributo VELOCIDADE, quem vencer ganha um ponto</label></li>
-      <li><label for="pistas-2-2-item">Caso seja um confronto de **Luta**, o jogador deve jogar um dado de 6 lados e somar o atributo FORÇA, quem vencer ganha um ponto</label></li>
-      <li><label for="pistas-2-3-item">Caso seja um confronto de **Aura**, o jogador deve jogar um dado de 6 lados e somar o atributo HAKI, quem perder, perde um ponto</label></li>
+      <li><label for="pistas-2-1-item">🏃‍♂️ **DESVIA**: o jogador deve jogar um dado de 6 lados e somar o atributo VELOCIDADE, quem vencer ganha um ponto</label></li>
+      <li><label for="pistas-2-2-item">👊 **LUTA**: o jogador deve jogar um dado de 6 lados e somar o atributo FORÇA, quem vencer ganha um ponto</label></li>
+      <li><label for="pistas-2-3-item">⚡ **AURA**: o jogador deve jogar um dado de 6 lados e somar o atributo HAKI, quem perder, perde um ponto</label></li>
       <li><label for="pistas-2-3-item">Nenhum jogador pode ter pontuação negativa (valores abaixo de 0)</label></li>
     </ul>
   </li>
@@ -105,8 +104,19 @@
 
 ## Tecnologias Utilizadas
 
-- JavaScript.
-- NodeJs.
+- JavaScript ES6+
+- Node.js
+- Chalk (para cores no terminal)
+- Readline (para interação com usuário)
+
+## Funcionalidades
+
+- ✅ Seleção interativa de personagens
+- ✅ Sistema de combate com 3 tipos diferentes (DESVIA, LUTA, AURA)
+- ✅ Animações e delays para experiência dinâmica
+- ✅ Interface colorida com Chalk
+- ✅ Proteção contra pontuação negativa
+- ✅ Sistema de pontuação balanceado
 
 ## Como Executar o Projeto
 
@@ -120,7 +130,14 @@
    cd one-piece-battle-simulator
    ```
 
-3. Execute o projeto:
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. Execute o projeto:
    ```bash
    npm start
    ```
+
+5. Escolha seus personagens favoritos e desfrute da batalha épica! 🏴‍☠️⚔️
