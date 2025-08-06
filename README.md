@@ -5,7 +5,7 @@ Neste projeto, foi desenvolvida uma batalha que considera as habilidades dos per
 <table>
         <tr>
             <td>
-                <img src="./docs/header.gif" alt="One Piece Battle" width="200">
+                <img src="./docs/Header.gif" alt="One Piece Battle" width="200">
             </td>
             <td>
                 <b>Objetivo:</b>
